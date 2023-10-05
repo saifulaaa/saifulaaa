@@ -36,6 +36,6 @@ def generate_strong_password(length=12):
     return strong_password
 
 # Example usage:
-if _name_ == "_main_":
+if __name__ == "__main__":
     password = generate_strong_password()
     print("Generated strong password:", password)
