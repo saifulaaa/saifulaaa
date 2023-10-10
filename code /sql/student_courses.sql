@@ -61,12 +61,12 @@ values
 (3,	"Sandhya",	19,	"F"),
 (4,	"Afrin",	16,	"F"),
 (5,	"Khyathi",	18,	"F"),
-(6,	"vihu",	16,	"M"),
+(6,	"Vihu",	16,	"M"),
 (7,	"Olivia",	18,	"F"),
 (8,	"Isabella",	19,	"F"),
 (9,	"Jack",	19,	"M"),
 (10,	"Jacob",	17,	"M"),
-(11,	"batman",	18,"M");
+(11,	"Batman",	18,"M");
 
 
 
