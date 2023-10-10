@@ -26,3 +26,13 @@ select
 from 
 (course inner join student_course on student_course.course_id = course.id) as A inner join student on A.student_id = student.id
 where course.name = "Machine Learning" and strftime("%Y",enrollment_date) = "2021";
+
+--------------  Q.No.4. For all the students, get the total number of courses taken by each student. --------------
+select
+ full_name,
+ count(course_id) as no_of_courses
+from student left join student_course on student.id = student_course.student_id
+group by 
+full_name
+order by 
+full_name ASC;
