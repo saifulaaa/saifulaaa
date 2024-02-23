@@ -1,0 +1,27 @@
+
+-- 1. Shows likelihood of a person would be died in case of she has been infected ?
+
+select location, sum(dead), sum(infected), (sum(dead) / sum(infected)*100) as dead_infected_likelihood
+from info
+group by location 
+order by location;
+
+-- 2. Shows likelihood of a person would be died in case of she has been vaccinated ? 
+  
+select location, sum(dead), sum(vaccinated), (sum(dead) / sum(vaccinated) * 100) as dead_vaccinated_likelihood
+from info
+group by location
+order by dead_vaccinated_likelihood desc;
+
+-- 3.Shows likelihood of a person would be infected in case of she has been vaccinated ?
+  
+select location,sum(vaccinated), sum(infected), (sum(infected) / sum(vaccinated) * 100) as infected_vaccinated_likelihood
+from info
+group by location;
+
+-- 4. Which country does have the highest death rate compare to population ?
+
+select location,population,sum(dead), (sum(dead) / population * 100) as Highestrate
+from info 
+group by location, population
+order by location; 
